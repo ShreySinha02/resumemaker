@@ -1,0 +1,11 @@
+.body{
+    background-color:#898AA6;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.card{
+    
+    min-height: 70vh;
+
+}

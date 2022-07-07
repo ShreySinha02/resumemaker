@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS only -->
+    {%load static%}
+    <link rel='stylesheet' href="{% static 'resume.css'%}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <title>Documents</title>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div class="left"></div>
+    <div class="stuff">
+      <br><br>
+      <h1>Resume</h1>
+      <h2 >{{user_profile.name}}</h2>
+      <h2>{{user_profile.email}}</h2>
+      <h2>{{user_profile.phone}}</h2>
+      <hr />
+      <br>
+      <p class="head">Interests</p>
+      <ul>
+        <li>Drawing</li>
+        <li>Photography</li>
+        <li>Design</li>
+        <li>Programming</li>
+        <li>Computer Science</li>
+      </ul>
+      <p class="head">Skills</p>
+      <ul>
+        <li>{{user_profile.skill}}</li>
+      </ul>
+      <p class="head">Education</p>
+      <ul>
+        <li>{{user_profile.degree}} from {{user_profile.university}}</li>
+          <li>{{user_profile.school}}</li>
+      </ul>
+      <p class="head">Experience</p>
+      <ul>
+       <li>{{user_profile.previous_work}}</li>
+      </ul>
+      <p class="head">Extracurriculars</p>
+      <ul>
+        <li>Recycling Club</li>
+        <li>Gardening Club</li>
+        <li>Book Club</li>
+      </ul>
+    </div>
+    <div class="right"></div>
+    
+  </body>
+</html>

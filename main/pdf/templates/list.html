@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS only -->
+    {%load static %}
+    <link rel='stylesheet' href="{% static 'list.css'%}"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <title>Documents</title>
+  </head>
+  <body class='body'>
+    <h2> CV Database profile List </h2>
+    <div class="card" style="width: 40rem; background-color:#E4DCCF;" >
+      
+      {% for p in profile %}
+      <br>
+       <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+               {{p.name}}
+            </div>
+        <div class="col">
+            <a href="/{{p.id}}" class="btn btn-warning">Downloads</a>
+            <a href="{% url 'delete' p.id %}" class="btn btn-danger">Delete</a>
+            
+        </div>
+        <hr>
+      </div>
+      {% endfor %}
+      <a type="button" href='/'class="btn btn-secondary">Back</a>
+    </div>
+    </div>
+    <br>
+  </body>
+</html>
